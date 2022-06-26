@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Assistant, sans-serif;
+}
+
+.app {
+  height: 100vh;
+
+}

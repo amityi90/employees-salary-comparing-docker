@@ -1,0 +1,21 @@
+.header {
+    background-color: #3F3F3F;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.header__logo {
+    height: 50px;
+    align-self: center;
+}
+
+.header__date {
+    font-family: 'Assistant';
+    font-size: 16px;
+    line-height: 26px;
+    color: white;
+    align-self: end;
+}
+

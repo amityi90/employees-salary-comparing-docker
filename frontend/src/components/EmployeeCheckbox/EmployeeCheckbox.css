@@ -1,0 +1,117 @@
+.employees-checkbox {
+    list-style: none;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+
+.employees-checkbox__label {
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 24px;
+    line-height: 28px;
+    transition: color .2s ease;
+    cursor: pointer;
+
+}
+
+.employees-checkbox__label-text {
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 24px;
+    line-height: 28px;
+    transition: color .2s ease;
+    cursor: pointer;
+
+}
+
+
+
+.employees-checkbox__label_disabled {
+    color: rgba(0, 0, 0, 0.2);
+    cursor: auto;
+
+}
+
+.employees-checkbox__checkbox {
+    display: none;
+}
+
+.employees-checkbox__new-checkbox {
+    width: 28px;
+    height: 28px;
+    border: 3px solid #D6D6D6;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.employees-checkbox__checkbox-fill {
+    animation: checking .4s ease 0s 1;
+    width: 15px;
+    height: 15px;
+    background: black;
+}
+
+.employees-checkbox__edit-buttom {
+    font-size: 12px;
+    line-height: 14px;
+    color: #828282;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    transform: translateX(-60px);
+    opacity: 0;
+    transition: all .2s ease;
+}
+
+.employees-checkbox__edit-buttom:hover {
+    color: #333333;
+}
+
+.employees-checkbox__edit-icon {
+    background-image: url(../../images/edit-button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 13px;
+    height: 13px;
+    border-radius: 200px;
+    border: 1px solid #FDC733;
+    filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.35));
+    margin-right: 4px;
+    transition: all .1s ease;
+}
+
+.employees-checkbox__edit-buttom:hover .employees-checkbox__edit-icon {
+    background-image: url(../../images/edit-button-hover.png);
+    border: 2px solid FDC733;
+
+}
+
+.employees-checkbox:hover .employees-checkbox__edit-buttom {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes checking {
+    from{
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    to{
+        transform: scale(1);
+    }
+    
+}

@@ -1,0 +1,14 @@
+.employees-list {
+    width: 40%;
+    box-shadow: inset -2px 2px 7px rgba(0, 0, 0, 0.28);
+    overflow-y: scroll;
+    direction: rtl;
+    padding: 30px;
+}
+
+.employees-list__list {
+    direction: ltr;
+}
+
+
+

@@ -1,0 +1,11 @@
+@import url(./vendor/fonts/fonts.css);
+@import url(./components/App/App.css);
+@import url(./components/Header/Header.css);
+@import url(./components/Main/Main.css);
+@import url(./components/EmployeesList/EmployeesList.css);
+@import url(./components/EmployeeCheckbox/EmployeeCheckbox.css);
+@import url(./components/ComparingSection/ComparingSection.css);
+@import url(./components/EditEmployee/EditEmployee.css);
+@import url(./components/Preloader/Preloader.css);
+@import url(./components/Footer/Footer.css);
+

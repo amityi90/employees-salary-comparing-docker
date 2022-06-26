@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Assistant;
+    src: url(./Assistant/Assistant-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./Roboto/roboto-400-regular.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./Roboto/roboto-700.woff);
+    font-weight: 700;
+}

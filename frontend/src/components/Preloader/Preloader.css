@@ -1,0 +1,18 @@
+.preloader {
+	display: block;
+	width: 25px;
+	height: 25px;
+	border: 2px solid black;
+	border-top-color: #FDC733;;	
+	border-radius: 50%;	
+	animation: spin .55s infinite ease;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
