@@ -8,20 +8,6 @@ db = app.config['DB']
 # # Specify the collection to be used
 col_employees = db.salarymanagement
 
-# print('---here---')
-# employees_list = []
-# cursor = col_employees.find({})  # find all employees
-# for employee in cursor:
-#     employees_list.append({
-#         'Name': employee['Name'],
-#         'Email': employee['Email'],
-#         'Address': employee['Address'],
-#         'Phone': employee['Phone'],
-#         'MaritalStatus': employee['MaritalStatus'],
-#         'Gender': employee['Gender'],
-#         'Salary': employee['Salary']
-#     })
-#     print(employee['Name'])
 
 @app.route("/get_all_employees", methods=['GET'])
 def get_all_employees():
