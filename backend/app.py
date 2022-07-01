@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask import request
 import pymongo
+import dns
 app = Flask(__name__)
 client = pymongo.MongoClient('mongodb+srv://amityi90:1234@cluster0.vk8sc5j.mongodb.net/?retryWrites=true&w=majority')
 app.config['DB'] = client.get_database('employees')

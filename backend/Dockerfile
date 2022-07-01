@@ -6,6 +6,9 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 ENV PYTHONUNBUFFERED 1
 
+RUN /usr/local/bin/python -m pip install "pymongo[srv]"
+
+
 ADD requirements.txt .
 RUN python -m pip install -r requirements.txt
 
