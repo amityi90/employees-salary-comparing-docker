@@ -6,7 +6,11 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 ENV PYTHONUNBUFFERED 1
 
-RUN /usr/local/bin/python -m pip install "pymongo[srv]"
+RUN python -m pip install pymongo
+
+RUN python -m pip install dnspython
+
+RUN python -m pip install 'pymongo[srv]'
 
 
 ADD requirements.txt .

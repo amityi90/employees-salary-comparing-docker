@@ -62,7 +62,7 @@ function App() {
         }
       })
       .then((data) => {
-        setEmployeeToEdit(data);
+        setEmployeeToEdit(data.employee);
       })
       .catch((err) => {
         console.log(err);
@@ -79,7 +79,7 @@ function App() {
       })
       .then((data) => {
         if (data) {
-          setEmployeesList(data);
+          setEmployeesList(data.list_employees);
         }
       })
       .catch((err) => {

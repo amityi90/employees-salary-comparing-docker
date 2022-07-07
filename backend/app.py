@@ -4,6 +4,11 @@ import pymongo
 import dns
 app = Flask(__name__)
 client = pymongo.MongoClient('mongodb+srv://amityi90:1234@cluster0.vk8sc5j.mongodb.net/?retryWrites=true&w=majority')
+# client = pymongo.MongoClient(
+#     host='cluster0',
+#     username="amityi90",
+#     password="1234",
+# )
 app.config['DB'] = client.get_database('employees')
 db = app.config['DB']
 # # Specify the collection to be used
@@ -54,7 +59,8 @@ def update_employee():
     try:
         request_json = request.get_json()
         name = request_json["Name"]
-        col_employees.find_one_and_update({'Name': name}, {'$set': request_json})
+        col_employees.find_one_and_update(
+            {'Name': name}, {'$set': request_json})
         return jsonify(message="Employee Updated"), 200
     except:
         return jsonify(message="Error in update_employee"), 500
