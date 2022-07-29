@@ -17,6 +17,7 @@ function App() {
   const [secondEmployee, setSecondEmployee] = useState(null);
   const [employeesList, setEmployeesList] = useState([]);
   const [employeeToEdit, setEmployeeToEdit] = useState({});
+  const baseURL = 'http://localhost:5000';
 
   function assignEmployees(firstEmployeeToAssign, secondEmployeeToAssign) {
 
@@ -25,7 +26,7 @@ function App() {
   }
 
   function updateEmployee(employee) {
-    return fetch(`/update_employee`, {
+    return fetch(`${baseURL}/update_employee`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -49,7 +50,7 @@ function App() {
   // define the employ that will be updated get it finally from db
   function assignEmployeeToUpdate(employee) {
     setEmployeeToEdit(employee);
-    fetch(`/get_employee`, {
+    fetch(`${baseURL}/get_employee`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -71,7 +72,7 @@ function App() {
 
   // initilizing the employees list
   useEffect(() => {
-    fetch('/get_all_employees')
+    fetch(`${baseURL}/get_all_employees`)
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -83,6 +84,7 @@ function App() {
         }
       })
       .catch((err) => {
+        console.log('still not');
         console.log(err);
       });
   }, [])

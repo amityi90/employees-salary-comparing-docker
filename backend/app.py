@@ -1,21 +1,33 @@
 from flask import Flask, jsonify
 from flask import request
+from flask_cors import CORS, cross_origin
 import pymongo
 import dns
 app = Flask(__name__)
+cors = CORS(app)
 client = pymongo.MongoClient('mongodb+srv://amityi90:1234@cluster0.vk8sc5j.mongodb.net/?retryWrites=true&w=majority')
-# client = pymongo.MongoClient(
-#     host='cluster0',
-#     username="amityi90",
-#     password="1234",
-# )
+
+app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['DB'] = client.get_database('employees')
 db = app.config['DB']
 # # Specify the collection to be used
 col_employees = db.salarymanagement
 
 
+@app.route("/get_all_employees_test", methods=['GET'])
+@cross_origin()
+def get_all_employees_test():
+    employees = [
+        {
+            "name": "dan",
+            "age": 2
+        }
+    ]
+    return jsonify(employees), 500
+
+
 @app.route("/get_all_employees", methods=['GET'])
+@cross_origin()
 def get_all_employees():
 
     try:
@@ -38,6 +50,7 @@ def get_all_employees():
 
 
 @app.route("/get_employee", methods=['POST'])
+@cross_origin()
 def get_employee():
 
     try:
@@ -54,6 +67,7 @@ def get_employee():
 
 
 @app.route("/update_employee", methods=['POST'])
+@cross_origin()
 def update_employee():
 
     try:
@@ -67,6 +81,7 @@ def update_employee():
 
 
 @app.route("/upload_employee", methods=['POST'])
+@cross_origin()
 def upload_employee():
 
     if request.method == 'POST':
