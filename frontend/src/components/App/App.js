@@ -84,7 +84,6 @@ function App() {
         }
       })
       .catch((err) => {
-        console.log('still not');
         console.log(err);
       });
   }, [])

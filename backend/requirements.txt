@@ -4,3 +4,4 @@ pymongo
 pymongo[srv]
 pymongo[tls]
 dnspython
+flask_cors
