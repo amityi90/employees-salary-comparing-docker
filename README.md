@@ -8,5 +8,3 @@ Choose two employees from the list and compare they salary.
 - clone the repo and cd to the diractory.
 - run: 'docker compose up -d'
 
-
-Note! the configurations of docker are not complete, all containers are running good exept the api container.
