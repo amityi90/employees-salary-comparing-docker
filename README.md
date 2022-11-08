@@ -7,4 +7,5 @@ Choose two employees from the list and compare they salary.
 
 - clone the repo and cd to the diractory.
 - run: 'docker compose up -d'
+- open your browser in port 3000
 
